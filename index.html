@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Announcement | 11 Januari 2026</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #faf9f6;
+        --text: #2f2f2f;
+        --sage: #9caf88;
+        --gold: #c9b37e;
+      }
+
+      .dark {
+        --bg: #121212;
+        --text: #eaeaea;
+        --sage: #8fa88a;
+        --gold: #d4bf8c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Ornamen Jawa */
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/batik.png"),
+          url("https://www.transparenttextures.com/patterns/gunungan.png");
+        background-size: auto, 280px;
+        background-position: center, top;
+        background-repeat: repeat, no-repeat;
+        opacity: 0.04;
+        z-index: 0;
+      }
+
+      .container {
+        max-width: 760px;
+        padding: 56px 24px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .date {
+        letter-spacing: 3px;
+        font-size: 13px;
+        margin-bottom: 16px;
+        color: #777;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 38px;
+      }
+
+      .divider {
+        width: 70px;
+        height: 2px;
+        background: var(--gold);
+        margin: 24px auto;
+      }
+
+      .subtitle {
+        font-size: 15px;
+        line-height: 1.9;
+        color: #666;
+      }
+
+      .guest {
+        margin: 18px 0;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .names {
+        margin: 36px 0;
+      }
+      .bride,
+      .groom {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+      }
+      .degree {
+        font-size: 13px;
+        color: #777;
+      }
+      .parents {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #666;
+      }
+      .and {
+        margin: 20px 0;
+        color: var(--sage);
+      }
+
+      /* Acara */
+      .schedule {
+        margin: 36px 0;
+        border: 1px solid var(--gold);
+        padding: 20px;
+      }
+      .schedule h3 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 12px;
+      }
+      .schedule p {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      /* Countdown */
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin: 30px 0;
+      }
+      .box {
+        border: 1px solid var(--gold);
+        padding: 10px 14px;
+      }
+      .box span {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+      }
+
+      /* RSVP */
+      .rsvp {
+        margin: 28px 0;
+      }
+      .rsvp a {
+        display: inline-block;
+        padding: 12px 24px;
+        border: 1px solid var(--gold);
+        text-decoration: none;
+        color: var(--text);
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      .rsvp a:hover {
+        background: var(--gold);
+        color: #fff;
+      }
+
+      /* Toggle */
+      .toggle {
+        margin-top: 24px;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--sage);
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 30px;
+        }
+        .bride,
+        .groom {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="date">SAVE THE DATE • 11 JANUARI 2026</div>
+
+      <h1>Bismillahirrahmanirrahim</h1>
+      <div class="divider"></div>
+
+      <p id="guestName" class="guest"></p>
+
+      <p class="subtitle">
+        Dengan memohon rahmat dan ridho Allah SWT, kami mengundang
+        Bapak/Ibu/Saudara/i untuk memberikan doa restu.
+      </p>
+
+      <div class="names">
+        <div class="bride">Febrilian Anggraeni Puspitaningrum S.Si</div>
+        <div class="parents">
+          (Putri tunggal dari Alm. Bapak Yudhie Eriyanto, S.T &amp; Ibu Erni
+          Kusdyawati, S.T)
+        </div>
+
+        <div class="and">&amp;</div>
+
+        <div class="groom">Muhammad Okki Graceda Mulyono S.T</div>
+        <div class="parents">
+          (Putra pertama dari Bapak Ir. H. Mulyono &amp; Ibu Hj. Yeni
+          Kurniawati, S.T)
+        </div>
+      </div>
+
+      <div class="schedule">
+        <h3>Susunan Acara</h3>
+        <p>
+          <strong>Akad Nikah</strong><br />
+          Minggu, 11 Januari 2026<br />
+          Pukul 08.00 WIB
+        </p>
+        <br />
+        <p>
+          <strong>Resepsi</strong><br />
+          Pukul 19.00 – Selesai
+        </p>
+      </div>
+
+      <div class="countdown">
+        <div class="box"><span id="d">0</span><br /><small>Hari</small></div>
+        <div class="box"><span id="h">0</span><br /><small>Jam</small></div>
+        <div class="box"><span id="m">0</span><br /><small>Menit</small></div>
+      </div>
+
+      <div class="rsvp">
+        <a id="rsvpBtn" href="#" target="_blank">Konfirmasi Kehadiran (RSVP)</a>
+      </div>
+
+      <p class="toggle" onclick="toggleDark()">🌙 Mode Malam</p>
+    </div>
+
+    <script>
+      // ===== Nama Tamu dari URL =====
+      const params = new URLSearchParams(window.location.search);
+      const guest = params.get("to");
+
+      if (guest) {
+        document.getElementById("guestName").innerText =
+          "Kepada Yth. Bapak/Ibu/Saudara/i " + decodeURIComponent(guest);
+      }
+
+      // ===== Countdown =====
+      const target = new Date("2026-01-10T00:00:00").getTime();
+      setInterval(() => {
+        const now = new Date().getTime();
+        const diff = target - now;
+
+        document.getElementById("d").innerText = Math.floor(
+          diff / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById("h").innerText = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        document.getElementById("m").innerText = Math.floor(
+          (diff % (1000 * 60 * 60)) / (1000 * 60)
+        );
+      }, 1000);
+
+      // ===== RSVP WhatsApp =====
+      const phone = "62815655050810"; // GANTI NOMOR WA
+      const message = `Assalamu’alaikum Warahmatullahi Wabarakatuh.
+Saya ${guest ? decodeURIComponent(guest) : "tamu undangan"}.
+
+Dengan ini mengonfirmasikan kehadiran pada pernikahan:
+Febrilian Anggraeni Puspitaningrum & Muhammad Okki Graceda Mulyono
+11 Januari 2026.
+
+Terima kasih.`;
+
+      document.getElementById("rsvpBtn").href =
+        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+      // ===== Dark Mode =====
+      function toggleDark() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
