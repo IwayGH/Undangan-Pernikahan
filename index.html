@@ -242,6 +242,9 @@
       </div>
 
       <p class="toggle" onclick="toggleDark()">🌙 Mode Malam</p>
+
+<div class="copyright" style="margin-top:40px; font-size:12px; color:#999;">
+  © Iway
     </div>
 
     <script>
@@ -254,22 +257,16 @@
           "Kepada Yth. Bapak/Ibu/Saudara/i " + decodeURIComponent(guest);
       }
 
-      // ===== Countdown =====
-      const target = new Date("2026-01-10T00:00:00").getTime();
-      setInterval(() => {
-        const now = new Date().getTime();
-        const diff = target - now;
+// ===== Countdown =====
+const target = new Date("2026-01-11T00:00:00").getTime();
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = target - now;
 
-        document.getElementById("d").innerText = Math.floor(
-          diff / (1000 * 60 * 60 * 24)
-        );
-        document.getElementById("h").innerText = Math.floor(
-          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        document.getElementById("m").innerText = Math.floor(
-          (diff % (1000 * 60 * 60)) / (1000 * 60)
-        );
-      }, 1000);
+  document.getElementById("d").innerText = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+  document.getElementById("h").innerText = Math.max(0, Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  document.getElementById("m").innerText = Math.max(0, Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+}, 1000);
 
       // ===== RSVP WhatsApp =====
       const phone = "62815655050810"; // GANTI NOMOR WA
